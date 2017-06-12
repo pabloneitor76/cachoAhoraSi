@@ -1,5 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+/* To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class IA {
     
-    public int[] dados;
+	public int[] dados;
     public int[][] cartilla;
     public List<Integer> numbers;
 
@@ -25,7 +25,7 @@ public class IA {
         this.cartilla = new int[11][5];
         numbers = new ArrayList<Integer>(5);
     }
-    
+    //Este constructor no es util, solo para pruebas
     public IA(int[]dadosLanzados){
         this.dados = dadosLanzados;
         this.cartilla = new int[11][5];
@@ -46,6 +46,7 @@ public class IA {
     public void llenarDados(){
         for(int x=0; x<5; x++)
             dados[x] = lanzarDado();
+        ordenar();
     }
     
     public void ordenar(){
@@ -132,8 +133,12 @@ public class IA {
         return res;
     }
 
-    public static void iniciar(){
-        int[] azar = {1,1,1,1,1};
+    public static void evaluar(){
+        for(int x=0; x<5; x++){
+            
+        }
+        /*
+        int[] azar = {1,3,2,5,4};
         IA ads = new IA(azar);
         for(int v=0; v<5; v++){
             System.out.print(ads.dados[v] + " ");
@@ -148,10 +153,20 @@ public class IA {
         System.out.println(ads.isFullOrPokerOrGrande());
         //System.out.println(ads.lanzarDado());
         //return ads.lanzarDado();
+        */
+    }
+    
+    public int evaluar_balas(int cant){
+        
+        return 0;
+    }
+    
+    public void anotar(int[] dados, boolean turno){
+        
     }
     
     public static void main(String[] args) {
-        iniciar();
+        evaluar();
         //ordenar();
     }
 }
